@@ -21,26 +21,26 @@ public class RollingTankController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W)){
             foreach (Rigidbody wheelie in LeftWheelies){
-                wheelie.maxAngularVelocity = 10;
-                wheelie.AddTorque(Vector3.right * torqueForward);
+                wheelie.maxAngularVelocity = 15;
+                wheelie.AddTorque(wheelie.transform.up * torqueForward);
             }
         }
         if(Input.GetKey(KeyCode.S)){
             foreach (Rigidbody wheelie in LeftWheelies){
-                wheelie.maxAngularVelocity = 10;
-                wheelie.AddTorque(Vector3.right * torqueBackward);
+                wheelie.maxAngularVelocity = 15;
+                wheelie.AddTorque(wheelie.transform.up * torqueBackward);
             }
         }
         if(Input.GetKey(KeyCode.E)){
             foreach (Rigidbody wheelie in RightWheelies){
-                wheelie.maxAngularVelocity = 10;
-                wheelie.AddTorque(Vector3.right * torqueForward);
+                wheelie.maxAngularVelocity = 15;
+                wheelie.AddTorque(wheelie.transform.up * torqueForward);
             }
         }
         if(Input.GetKey(KeyCode.D)){
             foreach (Rigidbody wheelie in RightWheelies){
-                wheelie.maxAngularVelocity = 10;
-                wheelie.AddTorque(Vector3.right * torqueBackward);
+                wheelie.maxAngularVelocity = 15;
+                wheelie.AddTorque(wheelie.transform.up * torqueBackward);
             }
         }
 
